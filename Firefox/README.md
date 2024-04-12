@@ -2,7 +2,7 @@
 
 Here is my solution to a problem I always face on ubuntu linux and relatives distros.
 
-I like Firefox and I want to have two different instance of firefox running at the same time, but I need it to be on different selector on the taskbar (Not overlapped on the same icon).
+I like Firefox and I want to have two different instance of firefox running at the same time, one for personal issues and the other for development, but I need it to be on different selector on the taskbar (Not overlapped on the same icon).
 
 So, to sove this, first I had to get rid of snap installation and install it with repositories (like the good old days).
 
