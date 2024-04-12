@@ -48,4 +48,6 @@ $ firefox -P
 Here is the main data on the web: https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles#:~:text=Firefox%20is%20closed.-,Manage%20profiles%20when%20Firefox%20is%20open,%2C%20passwords%2C%20and%20preference%20settings.
 
 Once you have two or more profiles created, you need to create a .desktop for each one. This is to get a different application launcher for each profile, and to have it running in separate takbar icons.
-You can find examples attached to this project
+You can find examples attached to this project.
+
+To get the launchers working, on Ubuntu, you need to place it inside your home folder .local/share/applications
