@@ -1,3 +1,5 @@
+# Installing Firefox via Apt (Not Snap) and get different instances running at the same time.
+
 Here is my solution to a problem I always face on ubuntu linux and relatives distros.
 
 I like Firefox and I want to have two different instance of firefox running at the same time, but I need it to be on different selector on the taskbar (Not overlapped on the same icon).
@@ -38,3 +40,12 @@ sudo apt update && sudo apt install firefox
 sudo apt install firefox-l10n-fr
 
 You can see a list of all available language packs by running apt-cache search firefox-l10n.
+
+# Then, you have to start firefox with different profiles
+
+$ firefox -P
+
+Here is the main data on the web: https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles#:~:text=Firefox%20is%20closed.-,Manage%20profiles%20when%20Firefox%20is%20open,%2C%20passwords%2C%20and%20preference%20settings.
+
+Once you have two or more profiles created, you need to create a .desktop for each one. This is to get a different application launcher for each profile, and to have it running in separate takbar icons.
+You can find examples attached to this project
