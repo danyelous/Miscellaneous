@@ -12,6 +12,10 @@ Here is the webpage where I found it how to: https://www.omgubuntu.co.uk/2022/04
 
 sudo snap remove firefox
 
+and just ins case also
+
+sudo apt remove firefox
+
 # Step 2: Create an APT keyring (if one doesn’t already exist):
 
 sudo install -d -m 0755 /etc/apt/keyrings
