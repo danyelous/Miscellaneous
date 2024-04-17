@@ -67,6 +67,7 @@ This answer is for the latest stable version of Firefox. You can use the Firefox
 
 sudo add-apt-repository ppa:mozillateam/ppa
 
+# Step 2:
 Then, copy and paste the following code in a terminal in one go (don't copy-paste line by line) to prioritize the apt version of firefox over the snap version.
 
 echo '
@@ -79,6 +80,7 @@ Pin: version 1:1snap1-0ubuntu2
 Pin-Priority: -1
 ' | sudo tee /etc/apt/preferences.d/mozilla-firefox
 
+# Step 3
 Next, remove the snap version of firefox
 
 sudo snap remove firefox
@@ -87,6 +89,7 @@ Also, just in case, do this one:
 
 sudo apt remove firefox
 
+# Step 4:
 If you see the following error,
 
 error: cannot perform the following tasks:
@@ -98,9 +101,13 @@ sudo systemctl stop var-snap-firefox-common-host\\x2dhunspell.mount
 sudo systemctl disable var-snap-firefox-common-host\\x2dhunspell.mount
 sudo snap remove firefox
 
+# Step 5:
+
 Install Firefox with apt.
 
 sudo apt install firefox
+
+# Step 6:
 
 To ensure that unattended upgrades do not reinstall the snap version of Firefox, enter the following command. Alternatively, you can turn off unattended upgrades. https://www.omgubuntu.co.uk/2016/02/how-to-disable-automatic-update-ubuntu
 
