@@ -55,3 +55,53 @@ Once you have two or more profiles created, you need to create a .desktop for ea
 You can find examples attached to this project.
 
 To get the launchers working, on Ubuntu, you need to place it inside your home folder .local/share/applications
+
+
+# Didin't work? Ok, wait, here is another one.
+
+Reference link: https://askubuntu.com/questions/1399383/how-to-install-firefox-as-a-traditional-deb-package-without-snap-in-ubuntu-22
+
+# Step 1:
+The other answer by Organic Marble is for Firefox-ESR, and the answer by eddygeek is for the beta version.
+This answer is for the latest stable version of Firefox. You can use the Firefox PPA maintained by Mozilla team.
+
+sudo add-apt-repository ppa:mozillateam/ppa
+
+Then, copy and paste the following code in a terminal in one go (don't copy-paste line by line) to prioritize the apt version of firefox over the snap version.
+
+echo '
+Package: *
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 1001
+
+Package: firefox
+Pin: version 1:1snap1-0ubuntu2
+Pin-Priority: -1
+' | sudo tee /etc/apt/preferences.d/mozilla-firefox
+
+Next, remove the snap version of firefox
+
+sudo snap remove firefox
+
+Also, just in case, do this one:
+
+sudo apt remove firefox
+
+If you see the following error,
+
+error: cannot perform the following tasks:
+- Remove data for snap "firefox" (1943) (unlinkat /var/snap/firefox/common/host-hunspell/en_ZA.dic: read-only file system)
+
+Then run the following commands (source https://askubuntu.com/a/1434769/124466 ) to disable the hunspell service, and try removing Firefox snap once again.
+
+sudo systemctl stop var-snap-firefox-common-host\\x2dhunspell.mount
+sudo systemctl disable var-snap-firefox-common-host\\x2dhunspell.mount
+sudo snap remove firefox
+
+Install Firefox with apt.
+
+sudo apt install firefox
+
+To ensure that unattended upgrades do not reinstall the snap version of Firefox, enter the following command. Alternatively, you can turn off unattended upgrades. https://www.omgubuntu.co.uk/2016/02/how-to-disable-automatic-update-ubuntu
+
+echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
