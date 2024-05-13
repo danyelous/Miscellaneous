@@ -1,5 +1,9 @@
 # Installing Firefox via Apt (Not Snap) and get different instances running at the same time.
 
+#This works on Xorg, not Wayland.
+
+You can switch from one to another on Ubuntu, on the user login page, with the option in the cog usually at the botom right.
+
 Here is my solution to a problem I always face on ubuntu linux and relatives distros.
 
 I like Firefox and I want to have two different instance of firefox running at the same time, one for personal issues and the other for development, but I need it to be on different selector on the taskbar (Not overlapped on the same icon).
