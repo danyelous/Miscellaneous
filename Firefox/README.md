@@ -1,6 +1,6 @@
 # Installing Firefox via Apt (Not Snap) and get different instances running at the same time.
 
-#This works on Xorg, not Wayland.
+# This works on Xorg, not Wayland.
 
 You can switch from one to another on Ubuntu, on the user login page, with the option in the cog usually at the botom right.
 
