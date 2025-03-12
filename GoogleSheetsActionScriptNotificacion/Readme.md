@@ -1,9 +1,9 @@
-# Vanguardia Classroom Email Notification System
+# Classroom Email Notification System
 
 # I created it with the help of Claude AI and ChatGPT
 
 ## Overview
-This Google Apps Script automates the process of sending Google Classroom registration information to students at Instituto Vanguardia. The script reads student information from a Google Spreadsheet and sends personalized emails with login credentials and helpful resources.
+This Google Apps Script automates the process of sending Google Classroom registration information to students at Instituto. The script reads student information from a Google Spreadsheet and sends personalized emails with login credentials and helpful resources.
 
 ## Features
 - Automatically sends emails to multiple students based on spreadsheet data
@@ -26,7 +26,7 @@ This Google Apps Script automates the process of sending Google Classroom regist
 1. Open your Google Spreadsheet
 2. Go to Extensions > Apps Script
 3. Copy and paste the script below into the Apps Script editor
-4. Save the project with a descriptive name (e.g., "Vanguardia Email System")
+4. Save the project with a descriptive name (e.g., "Email System")
 
 ### Script Code
 ```javascript
@@ -80,7 +80,7 @@ var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("users");
 - Modify the sender name by changing the `senderName` variable
 
 ## Important Notes
-- The default temporary password is set to 'Vanguardia'
+- The default temporary password is set to 'Clave001'
 - Students will be prompted to change this password on first login
 - The script includes contact information for technical support
 - Tutorial videos are included to help students get started
@@ -91,4 +91,4 @@ This script requires the following permissions:
 - Send emails on your behalf
 
 ## Support
-For questions or assistance, please contact the system administrator at dpontoriero@institutovanguardia.edu.ar
+For questions or assistance, please contact the system administrator at adminsitrator
