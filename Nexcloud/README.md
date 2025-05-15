@@ -18,3 +18,8 @@ $ sudo snap run nextcloud.occ config:system:get trusted_domains 1
 
 Overwrite HTTPS protocol
 $ sudo nextcloud.occ config:system:set overwriteprotocol --value 'https'
+
+# Update!
+# This video use Turnkey linux and makes it easier
+
+https://www.youtube.com/watch?v=mfbzTgVEVuE
